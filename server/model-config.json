@@ -13,12 +13,19 @@
       "./mixins"
     ]
   },
-  "User": {
+  "Account": {
     "dataSource": "db"
   },
   "AccessToken": {
     "dataSource": "db",
-    "public": false
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Account",
+        "foreignKey": "userId"
+      }
+    }
   },
   "ACL": {
     "dataSource": "db",
@@ -31,5 +38,8 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "MusicContainer": {
+    "dataSource": "music_storage"
   }
 }

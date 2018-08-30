@@ -1,6 +1,13 @@
 {
   "db": {
     "name": "db",
-    "connector": "memory"
+    "connector": "memory",
+    "file": "./db.json"
+  },
+  "music_storage": {
+    "name": "music_storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./musics"
   }
 }
